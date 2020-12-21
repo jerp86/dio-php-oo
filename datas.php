@@ -1,2 +1,5 @@
 <?php
-echo date('d/m/Y') . PHP_EOL;
+
+$data = new DateTime();
+
+var_dump($data);
