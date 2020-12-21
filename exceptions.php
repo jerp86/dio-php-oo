@@ -14,11 +14,15 @@ $usuario = [
     'idade' => 34,
 ];
 
+$status = false;
+
 try {
     $status = validarUsuario(($usuario));
 } catch (Exception $e) {
     echo $e->getMessage();
-    die(); // acaba com o processo
+} finally {
+    echo "Status da Operação: " . (int)$status; // cast
+    die();
 }
 
 echo "\n... executando ...\n";
