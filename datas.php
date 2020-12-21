@@ -2,4 +2,4 @@
 
 $data = new DateTime();
 
-var_dump($data);
+echo $data->format('d-m-Y') . PHP_EOL;
