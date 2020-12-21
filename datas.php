@@ -16,13 +16,14 @@
 $data = new DateTime();
 echo 'Data e hora agora: ' . $data->format('d-m-Y H:i:s') . PHP_EOL;
 
-$intervalo = new DateInterval('PT5M'); // coloca um período de 5 minutos
+// intervalo de 5 anos, 10 meses, 5 dias, 10 horas, 50 minutos e 10 segundos
+$intervalo = new DateInterval('P5Y10M5DT10H50M10S');
 
 
-$data->add($intervalo); // adiciona
-echo PHP_EOL . 'Acrescentando o intervalo de 5 minutos temos: ' . $data->format('d-m-Y H:i:s') . PHP_EOL;
+$data->add($intervalo); // adiciona o intervalor
+echo PHP_EOL . 'Acrescentando o intervalo temos: ' . $data->format('d-m-Y H:i:s') . PHP_EOL;
 
 $data = new DateTime();
 
-$data->sub($intervalo); // subtrai
-echo PHP_EOL . 'Subtraindo o intervalo de 5 minutos temos: ' . $data->format('d-m-Y H:i:s') . PHP_EOL;
+$data->sub($intervalo); // subtrai  o intervalor
+echo PHP_EOL . 'Subtraindo o intervalo temos: ' . $data->format('d-m-Y H:i:s') . PHP_EOL;
